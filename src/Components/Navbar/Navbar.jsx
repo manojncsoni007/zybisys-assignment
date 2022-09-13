@@ -9,12 +9,12 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <h1><Link to='/'>Anime Library</Link></h1>
-            {pathname == '/' && <input
+            {pathname === '/' && <input
                 type='text'
                 className='search-bar'
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder='Search Here !' />}
+                placeholder='Search a Anime Here..!' />}
 
         </div>
     )

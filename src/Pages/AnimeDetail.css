@@ -1,6 +1,7 @@
 .anime-details_container{
     position: relative;
     top: 6rem;
+    padding-bottom: 2rem;
 }
 .anime-detail_card{
     display: flex;

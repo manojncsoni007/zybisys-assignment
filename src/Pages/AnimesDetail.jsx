@@ -6,7 +6,7 @@ import './AnimeDetail.css'
 const AnimesDetail = () => {
     const params = useParams();
     const { data } = useData();
-    const animeDetail = data.find(item => item.mal_id == params.animeId)
+    const animeDetail = data.find(item => item.mal_id === +params.animeId)
 
     return (
         <div className='anime-details_container'>

@@ -1,5 +1,5 @@
 function filterBySearch(data, searchTerm) {
-    if (searchTerm.trim() == "") {
+    if (searchTerm.trim() === "") {
         return data;
     } else {
         return data.filter(item => item.title.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -7,12 +7,12 @@ function filterBySearch(data, searchTerm) {
 }
 
 function filterByGenres(data, filterTerm) {
-    if (filterTerm == 'All') {
+    if (filterTerm === 'All') {
         return data;
-    } else if(filterTerm == ''){
+    } else if(filterTerm === ''){
         return data;
     }else {
-        return data.filter(item => item.genres.some(item => item.name == filterTerm))
+        return data.filter(item => item.genres.some(item => item.name === filterTerm))
     }
 }
 
