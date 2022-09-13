@@ -1,0 +1,46 @@
+.anime-details_container{
+    position: relative;
+    top: 6rem;
+}
+.anime-detail_card{
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+.anime-detail_card .image-section{
+    width: 30%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.anime-detail_card .info-section{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.go-back_btn{
+    position: relative;
+    top: 0rem;
+    left: 1rem;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+.trailer{
+    cursor: pointer;
+    width: 12rem;
+    text-align: center;
+    background-color: slategray;
+    padding: 0.5rem 1rem;
+    color: white;
+    margin-top: 1rem
+}
+

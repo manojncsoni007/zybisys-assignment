@@ -1,0 +1,23 @@
+.anime-card{
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.2);
+    width: 15.5rem;
+    height: 25rem;
+    cursor: pointer;
+}
+.anime-card img{
+    width: 100%;
+    height: 18rem;
+}
+.anime-card .title{
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+.anime-card .rating{
+    padding: 0 0.5rem;
+    position: relative;
+    bottom: 0.1rem;
+}
+.title-container{
+    height: 2.5rem;
+}
