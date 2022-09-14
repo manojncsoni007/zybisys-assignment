@@ -16,7 +16,7 @@ const AnimesDetail = () => {
 
             <div className='anime-detail_card'>
                 <div className='image-section'>
-                    <img src={animeDetail.images.jpg.image_url} />
+                    <img src={animeDetail.images.jpg.image_url} alt={animeDetail.title}/>
                 </div>
                 <div className='info-section'>
                     <h3 className='title'>{animeDetail.title}</h3>

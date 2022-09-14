@@ -8,7 +8,7 @@ const AnimeCard = ({ data }) => {
 
     return (
         <div className='anime-card' onClick={() => navigate(`/AnimesDetails/${mal_id}`)}>
-            <img src={images.jpg.image_url} alt="" />
+            <img src={images.jpg.image_url} alt={title} />
             <div className="title-container"><p className='title'>{title}</p></div>
             <p className='rating'>{rating}</p>
         </div>
