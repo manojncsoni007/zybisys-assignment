@@ -7,8 +7,6 @@ const DataProvider = ({ children }) => {
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
 
-    console.log(data);
-
     useEffect(() => {
         (async () => {
             const response = await axios.get('https://api.jikan.moe/v4/anime');
