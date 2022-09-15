@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import { AnimesDetail, Home } from './Pages';
 import Navbar from './Components/Navbar/Navbar';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { useData } from './Context/data-context';
 
 function App() {
   const onDrag = (result) => {

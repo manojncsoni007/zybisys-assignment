@@ -7,8 +7,8 @@ import './Home.css'
 import { Droppable } from 'react-beautiful-dnd';
 
 const Home = () => {
-    const [filterTerm, setFilterTerm] = useState('');
-    const [wishlist, setWishlist] = useState([]);
+    const [filterTerm, setFilterTerm] = useState('All');
+    const [wishlist] = useState([]);
     const { data, searchTerm } = useData();
 
     const filteredDataByGenres = filterByGenres(data, filterTerm)
@@ -18,7 +18,7 @@ const Home = () => {
         <div className='home-container'>
             <div className='filter-container'>
                 {filterGenresData.map(item => (
-                    <span className={`categories ${filterTerm == item ? 'active' : ' '}`} onClick={() => setFilterTerm(item)}>{item}</span>
+                    <span className={`categories ${filterTerm === item ? 'active' : ' '}`} onClick={() => setFilterTerm(item)}>{item}</span>
                 ))}
             </div>
 
@@ -47,7 +47,7 @@ const Home = () => {
                                 <AnimeCard data={item} index={index} key={index} />
                             ))}
                             {
-                                wishlist.length == 0 && <span>Drag & Drop Here</span>
+                                wishlist.length === 0 && <span>Drag & Drop Here</span>
                             }
                             {provided.placeholder}
                         </div>
