@@ -5,6 +5,7 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
     const [data, setData] = useState([]);
+    const [wishlist,setWishlist] = useState();
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
@@ -16,7 +17,7 @@ const DataProvider = ({ children }) => {
     }, [])
 
     return (
-        <DataContext.Provider value={{ data, searchTerm, setSearchTerm }}>
+        <DataContext.Provider value={{ data, searchTerm, wishlist,setWishlist,setSearchTerm }}>
             {children}
         </DataContext.Provider>
     )
