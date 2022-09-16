@@ -17,18 +17,21 @@
     gap: 2rem;
 }
 .anime-container .wishlist-container{
-    position: sticky;
-    top: 5rem;
+    flex-direction: column;
+    padding: 1rem;
     border: 1px solid black;
     background-color: white;
     border-radius: 5px;
-    width: 19rem;
-    height: 25rem;
+    width: 18rem;
+    bottom: 0;
     margin: 3rem 0.2rem 0 0.1rem;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.2);
 }
 .wishlist-container h3{
     text-align: center;
+}
+.wishlist-container .wishlist-list {
+    margin: 1rem 0;
 }
 .wishlist-container span{
     position: absolute;

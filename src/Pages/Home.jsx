@@ -8,8 +8,7 @@ import { Droppable } from 'react-beautiful-dnd';
 
 const Home = () => {
     const [filterTerm, setFilterTerm] = useState('All');
-    const [wishlist] = useState([]);
-    const { data, searchTerm } = useData();
+    const { data, searchTerm, wishlist } = useData();
 
     const filteredDataByGenres = filterByGenres(data, filterTerm)
     const filteredData = filterBySearch(filteredDataByGenres, searchTerm);
@@ -17,8 +16,8 @@ const Home = () => {
     return (
         <div className='home-container'>
             <div className='filter-container'>
-                {filterGenresData.map(item => (
-                    <span className={`categories ${filterTerm === item ? 'active' : ' '}`} onClick={() => setFilterTerm(item)}>{item}</span>
+                {filterGenresData.map((item, index) => (
+                    <span className={`categories ${filterTerm === item ? 'active' : ' '}`} key={index} onClick={() => setFilterTerm(item)}>{item}</span>
                 ))}
             </div>
 
@@ -30,7 +29,7 @@ const Home = () => {
                             ref={provided.innerRef}
                             {...provided.droppableProps}>
                             {filteredData.map((item, index) => (
-                                <AnimeCard data={item} index={index} />
+                                <AnimeCard data={item} key={index} index={index} />
                             ))}
                             {provided.placeholder}
                         </div>
@@ -44,7 +43,10 @@ const Home = () => {
                             {...provided.droppableProps}>
                             <h3>Wishlist</h3>
                             {wishlist.map((item, index) => (
-                                <AnimeCard data={item} index={index} key={index} />
+                                <div className="wishlist-list">
+                                    <AnimeCard data={item} index={index} key={index} />
+                                </div>
+
                             ))}
                             {
                                 wishlist.length === 0 && <span>Drag & Drop Here</span>
