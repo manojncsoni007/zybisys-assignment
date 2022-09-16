@@ -5,7 +5,8 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
     const [data, setData] = useState([]);
-    const [wishlist, setWishlist] = useState([]);
+    const [wishlist, setWishlist] = useState(
+        localStorage.getItem("wishlist") ? JSON.parse(localStorage.getItem("wishlist")) : [])
     const [searchTerm, setSearchTerm] = useState('');
 
     console.log(wishlist)

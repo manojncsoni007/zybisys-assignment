@@ -32,7 +32,8 @@ function App() {
       complete.splice(destination.index, 0, add);
     }
 
-    setWishlist(complete);
+    localStorage.setItem('wishlist',JSON.stringify(complete))
+    setWishlist(JSON.parse(localStorage.getItem('wishlist')));
     setData(active);
   }
 
